@@ -1,0 +1,265 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Anniversary 💎</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Georgia, serif;
+    color: white;
+    background:
+        linear-gradient(rgba(5, 8, 25, 0.35), rgba(5, 8, 25, 0.65)),
+        url("forest-background.png") center center / cover fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 15px;
+    overflow-x: hidden;
+}
+
+.stars {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+        radial-gradient(white 1px, transparent 1px),
+        radial-gradient(#ffe5a0 1px, transparent 1px);
+    background-size: 90px 90px, 130px 130px;
+    background-position: 0 0, 40px 50px;
+    opacity: 0.45;
+    animation: sparkle 5s infinite alternate;
+}
+
+@keyframes sparkle {
+    from { opacity: 0.2; }
+    to { opacity: 0.65; }
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 720px;
+    padding: 38px 25px;
+    text-align: center;
+    background: rgba(8, 12, 30, 0.76);
+    border: 1px solid rgba(255, 213, 133, 0.75);
+    border-radius: 24px;
+    box-shadow: 0 0 45px rgba(255, 190, 90, 0.22);
+    backdrop-filter: blur(8px);
+}
+
+h1 {
+    color: #ffe3a6;
+    font-size: clamp(2rem, 6vw, 3.2rem);
+    text-shadow: 0 0 20px #ffbd64;
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    color: #f6dfc0;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.diamond {
+    display: inline-block;
+    font-size: 105px;
+    margin: 15px 0;
+    animation: float 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 18px #b9dfff);
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(-4deg); }
+    50% { transform: translateY(-18px) rotate(4deg); }
+}
+
+.description {
+    color: #f7e8d2;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    margin: 12px auto 25px;
+    max-width: 540px;
+}
+
+button {
+    padding: 15px 28px;
+    border: 1px solid #ffe1a0;
+    border-radius: 40px;
+    background: linear-gradient(135deg, #9b632c, #f5c878);
+    color: #21152a;
+    font-family: Georgia, serif;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 0 22px rgba(255, 196, 105, 0.45);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 35px rgba(255, 213, 133, 0.8);
+}
+
+.letter {
+    display: none;
+    margin-top: 28px;
+    padding: 25px;
+    text-align: left;
+    line-height: 1.9;
+    color: #f9e9d5;
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 215, 150, 0.4);
+    border-radius: 18px;
+    animation: appear 1s ease;
+}
+
+.letter h2 {
+    color: #ffdda0;
+    text-align: center;
+}
+
+.letter p {
+    margin-bottom: 17px;
+}
+
+.signature {
+    text-align: right;
+    color: #ffdda0;
+    font-style: italic;
+}
+
+footer {
+    margin-top: 25px;
+    color: #e9d6bc;
+    font-size: 0.9rem;
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.firefly {
+    position: fixed;
+    width: 6px;
+    height: 6px;
+    background: #ffe69b;
+    border-radius: 50%;
+    box-shadow: 0 0 14px 4px #ffce76;
+    pointer-events: none;
+    animation: drift 7s ease-in-out infinite alternate;
+}
+
+.firefly:nth-child(2) { left: 15%; top: 25%; }
+.firefly:nth-child(3) { left: 80%; top: 30%; animation-delay: 2s; }
+.firefly:nth-child(4) { left: 25%; top: 80%; animation-delay: 3s; }
+.firefly:nth-child(5) { left: 88%; top: 75%; animation-delay: 1s; }
+
+@keyframes drift {
+    from { transform: translate(0, 0); opacity: 0.3; }
+    to { transform: translate(30px, -35px); opacity: 1; }
+}
+
+@media (max-width: 500px) {
+    .container { padding: 28px 17px; }
+    .diamond { font-size: 85px; }
+    .letter { padding: 18px; }
+}
+</style>
+</head>
+
+<body>
+<div class="stars"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+
+<main class="container">
+    <h1>Happy Anniversary, Hon 🌙</h1>
+
+    <p class="subtitle">
+        Another chapter together... and forever to go.
+    </p>
+
+    <div class="diamond">💎</div>
+
+    <p class="description">
+        Beneath a thousand stars, among the trees of an enchanted forest,
+        there is something more precious than every treasure in the world:
+        the memories we share and the bond we continue to build.
+    </p>
+
+    <button onclick="toggleLetter()" id="letterButton">
+        Open Our Anniversary Letter ♡
+    </button>
+
+    <section class="letter" id="letter">
+        <h2>My Precious Diamond 💎</h2>
+
+        <p>
+            My love,
+        </p>
+
+        <p>
+            If our story were a forest, I would want to explore every
+            path with you. Through every season, every storm, and every
+            beautiful sunrise, I would still choose to walk beside you.
+        </p>
+
+        <p>
+            You remind me that the most beautiful things in life cannot
+            always be measured or explained. Like a rare diamond shining
+            beneath the stars, you bring a light into my world that
+            makes everything feel a little more magical.
+        </p>
+
+        <p>
+            Thank you for the memories, the laughter, the little moments,
+            and everything that makes our bond special. I hope we continue
+            creating countless more memories together.
+        </p>
+
+        <p>
+            No matter how many stars fill the sky or how many trees
+            grow in this forest, you will always be someone precious
+            to me.
+        </p>
+
+        <p class="signature">
+            With all my love, always ♡
+        </p>
+    </section>
+
+    <footer>
+        You. Me. Always. ♡
+    </footer>
+</main>
+
+<script>
+function toggleLetter() {
+    const letter = document.getElementById("letter");
+    const button = document.getElementById("letterButton");
+
+    if (letter.style.display === "block") {
+        letter.style.display = "none";
+        button.textContent = "Open Our Anniversary Letter ♡";
+    } else {
+        letter.style.display = "block";
+        button.textContent = "Close Our Letter ♡";
+    }
+}
+</script>
+</body>
+</html>
